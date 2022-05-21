@@ -1,0 +1,7 @@
+# The example page is kept in etc/example.json
+
+# Custom user-side pages are kept in ...
+etc/index.json
+
+# Custom user-side CSS and other files are recommended to be kept in ...
+etc/custom/

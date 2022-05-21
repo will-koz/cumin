@@ -1,0 +1,14 @@
+{
+	"name": "Example Page",
+	"version": 1,
+
+	"styles" : ["darknord.css", "theme.css"],
+
+	"pages" : {
+		"main" : {
+			"styles" : [
+				[], [], ["mobile.css"]
+			]
+		}
+	}
+}
