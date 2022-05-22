@@ -1,4 +1,14 @@
 <?php
+function html_content_footer () {
+	$returnText = "</div>";
+	return $returnText;
+}
+
+function html_content_header () {
+	$returnText = "<div id=\"context\">";
+	return $returnText;
+}
+
 function html_doc_comment ($json_obj, $frame_name, $key_name, $key_version) {
 	$name = $json_obj[$key_name];
 	$version = $json_obj[$key_version];
@@ -6,13 +16,13 @@ function html_doc_comment ($json_obj, $frame_name, $key_name, $key_version) {
 	return $returnText;
 }
 
-function html_doc_header () {
-	$returnText = "<!DOCTYPE html><html><head>";
+function html_doc_footer () {
+	$returnText = "</body></html>";
 	return $returnText;
 }
 
-function html_doc_footer () {
-	$returnText = "</body></html>";
+function html_doc_header () {
+	$returnText = "<!DOCTYPE html><html><head>";
 	return $returnText;
 }
 

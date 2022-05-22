@@ -26,5 +26,8 @@ echo html_doc_comment($pagejson, $frame_name, $json_key_name, $json_key_version)
 include "src/styles.php";
 
 echo html_doc_torso();
+
+include "src/render.php";
+
 echo html_doc_footer();
 ?>

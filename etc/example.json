@@ -7,7 +7,7 @@
 	"pages" : {
 		"main" : {
 			"styles" : [
-				[], [], ["mobile.css"]
+				[], ["desktop.css"], ["mobile.css"]
 			]
 		}
 	}
