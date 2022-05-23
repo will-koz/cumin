@@ -5,7 +5,7 @@ function html_content_footer () {
 }
 
 function html_content_header () {
-	$returnText = "<div id=\"context\">";
+	$returnText = "<div id=\"content\">";
 	return $returnText;
 }
 

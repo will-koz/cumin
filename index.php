@@ -1,5 +1,6 @@
 <?php
 include_once "conf.php";
+include_once "lib/divs.php";
 include_once "lib/json.php";
 include_once "lib/templates.php";
 include_once "lib/utilities.php";

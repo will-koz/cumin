@@ -10,6 +10,7 @@ $get_key_frame = "frame";
 
 $json_files = ["index.json", "example.json"];
 
+$json_key_content = "content";
 $json_key_name = "name";
 $json_key_pages = "pages";
 $json_key_styles = "styles";

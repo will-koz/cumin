@@ -6,6 +6,13 @@
 
 	"pages" : {
 		"main" : {
+			"content" : [
+				{
+					"type" : "clock",
+					"delimiter" : "hr"
+				}
+			],
+
 			"styles" : [
 				[], ["desktop.css"], ["mobile.css"]
 			]
