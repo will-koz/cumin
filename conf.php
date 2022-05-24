@@ -10,10 +10,13 @@ $get_key_frame = "frame";
 
 $json_files = ["index.json", "example.json"];
 
+$json_key_classes = "classes";
 $json_key_content = "content";
+$json_key_delimiter = "delimiter";
 $json_key_name = "name";
 $json_key_pages = "pages";
 $json_key_styles = "styles";
+$json_key_type = "type";
 $json_key_version = "version";
 
 $location_prefix = "etc/";
