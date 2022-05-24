@@ -7,4 +7,9 @@ body {
 
 .item {
 	background-color: #1D2129;
+	box-shadow: none;
+}
+
+.item:hover {
+	box-shadow: 5px 5px #2E3F54;
 }

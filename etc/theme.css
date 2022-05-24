@@ -3,8 +3,22 @@ body {
 	margin: 0%;
 }
 
+hr {
+	border: none;
+	border-top: 1px solid;
+	margin: 15px;
+}
+
 /* ---------------------------------------------------------------------------------------------- */
 
 .item {
 	padding: 10px;
+	border-radius: 10px;
+	margin: 10px;
+	transition: 0.3s ease;
+}
+
+.item:hover {
+	border-radius: 3px;
+	transition: 0.3s ease;
 }

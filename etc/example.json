@@ -13,8 +13,15 @@
 					"content" : "Hello World"
 				},
 				{
-					"type" : "clock",
+					"type" : "XText",
+					"classes" : ["hello_world"],
+					"content" : "Second Hello World",
 					"delimiter" : "hr"
+				},
+				{
+					"type" : "XText",
+					"classes" : ["hello_world"],
+					"content" : "Final Hello World"
 				}
 			],
 

@@ -6,11 +6,11 @@ function get_div ($classes, $content, $new_div, $delimiter) {
 		$returnText = "<div class=\"";
 		for ($i = 0; $i < count($classes); $i++)
 			$returnText .= $classes[$i] . (($i == count($classes) - 1) ? "" : " ");
+		$returnText .= "\">";
 	}
 
-	$returnText .= "\">";
 	$returnText .= $content;
-	if ($delimiter == "hr") $returnText .= "<hr>";
+	if ($delimiter == "hr") $returnText .= "<hr />";
 	else $returnText .= div_footer();
 	return $returnText;
 }
@@ -21,8 +21,8 @@ function get_div_xtext ($classes, $item, $new_div) {
 	if (isset($item[$json_key_classes])) $classes = array_merge($classes, $item[$json_key_classes]);
 	$classes = array_merge($classes, ["xtext"]);
 	$returnText .= (isset($item[$json_key_delimiter])) ?
-		get_div($classes, $item[$json_key_content], true, $item[$json_key_delimiter]) :
-		get_div($classes, $item[$json_key_content], true, "");
+		get_div($classes, $item[$json_key_content], $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $item[$json_key_content], $new_div, "");
 	return $returnText;
 }
 
