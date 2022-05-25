@@ -9,7 +9,7 @@
   - [ ] Searc - Search Engine
   - [ ] Table - Table
   - [ ] Wther - Weather
-  - [ ] XFile - Contents of a file. (X-FILE??!?! \*soyjack face\*?)
+  - [x] XFile - Contents of a file. (X-FILE??!?! \*soyjack face\*?)
   - [ ] XLink - Link
     - [ ] GHLnk - GitHub Link
     - [ ] RLink - Subreddit Link

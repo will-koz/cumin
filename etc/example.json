@@ -22,6 +22,10 @@
 					"type" : "XText",
 					"classes" : ["hello_world"],
 					"content" : "Final Hello World"
+				},
+				{
+					"type" : "XFile",
+					"content" : "lorem.txt"
 				}
 			],
 

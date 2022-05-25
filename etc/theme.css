@@ -4,8 +4,11 @@ body {
 }
 
 hr {
-	border: none;
-	border-top: 1px solid;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	border-top-style: solid;
+	border-top-width: 1px;
 	margin: 15px;
 }
 
