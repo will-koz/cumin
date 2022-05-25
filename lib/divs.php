@@ -4,7 +4,7 @@ function div_footer () { return "</div>"; }
 function get_js_content_copy ($content) {
 	$returnText = " onclick=\"";
 	$returnText .= "navigator.clipboard.writeText('" . $content . "');";
-	$returnText .= "\"";
+	$returnText .= "\" title=\"" . $content . "\"";
 	return $returnText;
 }
 
@@ -40,6 +40,18 @@ function get_div_xfile ($classes, $item, $new_div) {
 	return get_div_xtext($classes, $item, $new_div);
 }
 
+function get_div_xlink ($classes, $item, $new_div) {
+	global $json_key_content, $json_key_delimiter, $json_key_href;
+	$returnText = "";
+	$classes = array_merge($classes, ["xlink"]);
+	$item[$json_key_content] = html_a_header($item[$json_key_href]) . $item[$json_key_content];
+ 	$item[$json_key_content] .= html_a_footer();
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $item[$json_key_content], $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $item[$json_key_content], $new_div, "");
+	return $returnText;
+}
+
 function get_div_xtext ($classes, $item, $new_div) {
 	global $json_key_content, $json_key_delimiter;
 	$returnText = "";
@@ -62,6 +74,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "xfile":
 			$returnText .= get_div_xfile($classes_list, $item, $new_div);
+			break;
+		case "xlink":
+			$returnText .= get_div_xlink($classes_list, $item, $new_div);
 			break;
 		case "xtext":
 			$returnText .= get_div_xtext($classes_list, $item, $new_div);

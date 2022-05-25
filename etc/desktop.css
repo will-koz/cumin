@@ -11,3 +11,8 @@ hr {
 .clcpy {
 	border-width: 1px;
 }
+
+.item {
+	margin: 10px;
+	padding: 10px;
+}

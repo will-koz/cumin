@@ -27,6 +27,17 @@
 					"type" : "ClCpy",
 					"content" : "Click to Copy",
 					"copy" : "Click to Copy (Copied)"
+				},
+				{
+					"type" : "XLink",
+					"content" : "Click to go to Google",
+					"delimiter" : "hr",
+					"href" : "https://google.com"
+				},
+				{
+					"type" : "XLink",
+					"content" : "Go to XKCD",
+					"href" : "https://xkcd.com"
 				}
 			],
 

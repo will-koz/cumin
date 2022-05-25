@@ -1,4 +1,14 @@
 <?php
+function html_a_footer () {
+	$returnText = "</a>";
+	return $returnText;
+}
+
+function html_a_header ($href) {
+	$returnText = "<a target='_blank' href='" . $href . "'>";
+	return $returnText;
+}
+
 function html_content_footer () {
 	$returnText = "</div>";
 	return $returnText;

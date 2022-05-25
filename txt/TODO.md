@@ -11,7 +11,7 @@
   - [ ] Topic - Media/Links related to a singular topic
   - [ ] Wther - Weather
   - [x] XFile - Contents of a file. (X-FILE??!?! \*soyjack face\*?)
-  - [ ] XLink - Link
+  - [x] XLink - Link
     - [ ] GHLnk - GitHub Link
     - [ ] RLink - Subreddit Link
     - [ ] WiLnk - Wikipedia Link
