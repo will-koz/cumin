@@ -24,8 +24,9 @@
 					"content" : "Final Hello World"
 				},
 				{
-					"type" : "XFile",
-					"content" : "lorem.txt"
+					"type" : "ClCpy",
+					"content" : "Click to Copy",
+					"copy" : "Click to Copy (Copied)"
 				}
 			],
 

@@ -8,11 +8,14 @@ hr {
 	border-left: none;
 	border-right: none;
 	border-top-style: solid;
-	border-top-width: 1px;
 	margin: 15px;
 }
 
 /* ---------------------------------------------------------------------------------------------- */
+
+.clcpy {
+ 	border-style: solid;
+}
 
 .item {
 	padding: 10px;

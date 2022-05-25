@@ -12,6 +12,7 @@ $json_files = ["index.json", "example.json"];
 
 $json_key_classes = "classes";
 $json_key_content = "content";
+$json_key_copy = "copy";
 $json_key_delimiter = "delimiter";
 $json_key_name = "name";
 $json_key_pages = "pages";

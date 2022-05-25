@@ -1,13 +1,14 @@
 # TODO
 
 - [ ] Items
-  - [ ] ClCpy - Clipboard copying
+  - [x] ClCpy - Clipboard copying
   - [ ] Clock - Clock
   - [ ] Image - Image
   - [ ] ImgCl - Image with clipboard copying
   - [ ] ImgLk - Image with link
   - [ ] Searc - Search Engine
   - [ ] Table - Table
+  - [ ] Topic - Media/Links related to a singular topic
   - [ ] Wther - Weather
   - [x] XFile - Contents of a file. (X-FILE??!?! \*soyjack face\*?)
   - [ ] XLink - Link

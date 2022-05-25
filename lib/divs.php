@@ -1,17 +1,35 @@
 <?php
 function div_footer () { return "</div>"; }
 
-function get_div ($classes, $content, $new_div, $delimiter) {
+function get_js_content_copy ($content) {
+	$returnText = " onclick=\"";
+	$returnText .= "navigator.clipboard.writeText('" . $content . "');";
+	$returnText .= "\"";
+	return $returnText;
+}
+
+function get_div ($classes, $content, $new_div, $delimiter, $extradata = "") {
 	if ($new_div == true) {
 		$returnText = "<div class=\"";
 		for ($i = 0; $i < count($classes); $i++)
 			$returnText .= $classes[$i] . (($i == count($classes) - 1) ? "" : " ");
-		$returnText .= "\">";
+		$returnText .= "\"" . $extradata . ">";
 	}
 
 	$returnText .= $content;
 	if ($delimiter == "hr") $returnText .= "<hr />";
 	else $returnText .= div_footer();
+	return $returnText;
+}
+
+function get_div_clcpy ($classes, $item, $new_div) {
+	global $json_key_content, $json_key_copy, $json_key_delimiter;
+	$returnText = "";
+	$classes = array_merge($classes, ["clcpy"]);
+	$jscc = get_js_content_copy($item[$json_key_copy]);
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $item[$json_key_content], $new_div, $item[$json_key_delimiter], $jscc) :
+		get_div($classes, $item[$json_key_content], $new_div, "", $jscc);
 	return $returnText;
 }
 
@@ -33,11 +51,15 @@ function get_div_xtext ($classes, $item, $new_div) {
 }
 
 function get_item_html ($item, $new_div) {
+	// Handle each individual item by keyword
 	global $json_key_classes, $json_key_type;
 	$returnText = "";
 	$classes_list = ["item"];
 	if (isset($item[$json_key_classes])) $classes = array_merge($classes, $item[$json_key_classes]);
 	switch (strtolower($item[$json_key_type])) {
+		case "clcpy":
+			$returnText .= get_div_clcpy($classes_list, $item, $new_div);
+			break;
 		case "xfile":
 			$returnText .= get_div_xfile($classes_list, $item, $new_div);
 			break;
