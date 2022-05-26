@@ -9,6 +9,7 @@ $error_style_qty2 = " elements.</i>";
 
 $get_key_frame = "frame";
 
+$js_files = ["index.js"];
 $json_files = ["index.json", "example.json"];
 
 $json_key_classes = "classes";

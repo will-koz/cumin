@@ -11,6 +11,8 @@ For all items, the `classes` field is an array of additional classes that item i
   - `content` The text to be shown in the content of the item.
   - `copy` The text to be copied and shown in mouseover text.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+- **Clock** Clock that updates every second.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
 - **Image** Image item.
   - `src` Source relative to [index.php](../index.php)
 - **ImgCl** Image item for clipboard copying.
@@ -32,5 +34,7 @@ For all items, the `classes` field is an array of additional classes that item i
 
 ## Additional Reserved Classes
 
+- `clock` related:
+  - **isodt**
 - **image-img**
 - **item**

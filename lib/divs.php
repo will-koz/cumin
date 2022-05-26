@@ -33,6 +33,16 @@ function get_div_clcpy ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_clock ($classes, $item, $new_div) {
+	global $json_key_delimiter;
+	$returnText = "";
+	$classes = array_merge($classes, ["clock"]);
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, "", $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, "", $new_div, "");
+	return $returnText;
+}
+
 function get_div_image ($classes, $item, $new_div) {
 	global $error_image_new_div, $json_key_src;
 	if ($new_div == false) exit($error_image_new_div);
@@ -104,6 +114,9 @@ function get_item_html ($item, $new_div) {
 	switch (strtolower($item[$json_key_type])) {
 		case "clcpy":
 			$returnText .= get_div_clcpy($classes_list, $item, $new_div);
+			break;
+		case "clock":
+			$returnText .= get_div_clock($classes_list, $item, $new_div);
 			break;
 		case "image":
 			$returnText .= get_div_image($classes_list, $item, $new_div);

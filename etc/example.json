@@ -8,6 +8,9 @@
 		"main" : {
 			"content" : [
 				{
+					"type" : "Clock"
+				},
+				{
 					"type" : "XText",
 					"classes" : ["hello_world"],
 					"content" : "Hello World"
