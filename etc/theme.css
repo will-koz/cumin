@@ -21,6 +21,15 @@ hr {
  	border-style: solid;
 }
 
+.image {
+	padding: 0px !important;
+}
+
+.image-img {
+	border-radius: inherit;
+	max-width: 100%;
+}
+
 .item {
 	border-radius: 10px;
 	margin: 50px;

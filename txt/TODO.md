@@ -3,7 +3,7 @@
 - [ ] Items
   - [x] ClCpy - Clipboard copying
   - [ ] Clock - Clock
-  - [ ] Image - Image
+  - [x] Image - Image
   - [ ] ImgCl - Image with clipboard copying
   - [ ] ImgLk - Image with link
   - [ ] Searc - Search Engine

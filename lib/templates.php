@@ -40,4 +40,12 @@ function html_doc_torso () {
 	$returnText = "</head><body>";
 	return $returnText;
 }
+
+function html_img ($classes, $src) {
+	$returnText = "<img class='";
+	for ($i = 0; $i < count($classes); $i++)
+		$returnText .= $classes[$i] . (($i == count($classes) - 1) ? "" : " ");
+	$returnText .= "' src='" . $src . "' />";
+	return $returnText;
+}
 ?>

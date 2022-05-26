@@ -2,6 +2,7 @@
 $default_frame_name = "main";
 
 $error = "<b>Error:</b>";
+$error_image_new_div = $error . " <i>Image items must be new divs.</i>";
 $error_no_json = $error . " <i>No JSON file found.</i>";
 $error_style_qty1 = $error . " <i>styles field must have exactly ";
 $error_style_qty2 = " elements.</i>";
@@ -17,6 +18,7 @@ $json_key_delimiter = "delimiter";
 $json_key_href = "href";
 $json_key_name = "name";
 $json_key_pages = "pages";
+$json_key_src = "src";
 $json_key_styles = "styles";
 $json_key_type = "type";
 $json_key_version = "version";
