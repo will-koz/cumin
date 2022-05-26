@@ -5,7 +5,7 @@
   - [ ] Clock - Clock
   - [x] Image - Image
   - [ ] ImgCl - Image with clipboard copying
-  - [ ] ImgLk - Image with link
+  - [x] ImgLk - Image with link
   - [ ] Searc - Search Engine
   - [ ] Table - Table
   - [ ] Topic - Media/Links related to a singular topic

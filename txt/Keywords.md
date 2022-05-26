@@ -13,6 +13,9 @@ For all items, the `classes` field is an array of additional classes that item i
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
 - **Image** Image item.
   - `src` Source relative to [index.php](../index.php)
+- **ImgLk** Image item that also serves as a link.
+  - `href` The link destination.
+  - `src` Source relative to [index.php](../index.php)
 - **XFile** Text field from external file.
   - `content` The file from which text is to be taken.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
