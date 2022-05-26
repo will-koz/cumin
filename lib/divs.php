@@ -43,6 +43,17 @@ function get_div_image ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_imgcl ($classes, $item, $new_div) {
+	global $error_image_new_div, $json_key_copy, $json_key_src;
+	if ($new_div == false) exit($error_image_new_div);
+	$returnText = "";
+	$classes = array_merge($classes, ["imgcl"]);
+	$jscc = get_js_content_copy($item[$json_key_copy]);
+	$content = html_img(["image-img"], $item[$json_key_src]);
+	$returnText .= get_div($classes, $content, $new_div, "", $jscc);
+	return $returnText;
+}
+
 function get_div_imglk ($classes, $item, $new_div) {
 	global $error_image_new_div, $json_key_href, $json_key_src;
 	if ($new_div == false) exit($error_image_new_div);
@@ -96,6 +107,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "image":
 			$returnText .= get_div_image($classes_list, $item, $new_div);
+			break;
+		case "imgcl":
+			$returnText .= get_div_imgcl($classes_list, $item, $new_div);
 			break;
 		case "imglk":
 			$returnText .= get_div_imglk($classes_list, $item, $new_div);

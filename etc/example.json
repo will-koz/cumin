@@ -40,8 +40,8 @@
 					"href" : "https://xkcd.com"
 				},
 				{
-					"type" : "ImgLk",
-					"href" : "https://knowyourmeme.com",
+					"type" : "ImgCl",
+					"copy" : "PROBLEM?",
 					"src" : "https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png"
 				}
 			],

@@ -4,7 +4,7 @@
   - [x] ClCpy - Clipboard copying
   - [ ] Clock - Clock
   - [x] Image - Image
-  - [ ] ImgCl - Image with clipboard copying
+  - [x] ImgCl - Image with clipboard copying
   - [x] ImgLk - Image with link
   - [ ] Searc - Search Engine
   - [ ] Table - Table
