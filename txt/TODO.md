@@ -2,7 +2,7 @@
 
 - [ ] Items
   - [x] ClCpy - Clipboard copying
-  - [ ] Clock - Clock
+  - [x] Clock - Clock
   - [x] Image - Image
   - [x] ImgCl - Image with clipboard copying
   - [x] ImgLk - Image with link

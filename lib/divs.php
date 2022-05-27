@@ -37,9 +37,13 @@ function get_div_clock ($classes, $item, $new_div) {
 	global $json_key_delimiter;
 	$returnText = "";
 	$classes = array_merge($classes, ["clock"]);
+	$content = "<div class='cabov'><label class='chour'></label>";
+	$content .= "<label class='cminu'></label><label class='cscnd'></label></div><br />";
+	$content .= "<div class='cbelw'><label class='cyear'></label>";
+	$content .= "<label class='cmnth'></label><label class='cdate'></label></div>";
 	$returnText .= (isset($item[$json_key_delimiter])) ?
-		get_div($classes, "", $new_div, $item[$json_key_delimiter]) :
-		get_div($classes, "", $new_div, "");
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
 	return $returnText;
 }
 

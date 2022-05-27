@@ -17,8 +17,13 @@ function updateClock () {
 	var year = current_time.getFullYear();
 	var isodate = year + "-" + checkTime(current_time.getMonth()) + "-" + checkTime(day);
 	isodate += " " + hour + ":" + minute + ":" + seconds;
-	// TEMP
-	updateClassInnerHTMLWithValue("isodt", isodate)
+	updateClassInnerHTMLWithValue("isodt", isodate); // Unlikely to ever be utilized
+	updateClassInnerHTMLWithValue("chour", hour);
+	updateClassInnerHTMLWithValue("cminu", minute);
+	updateClassInnerHTMLWithValue("cscnd", seconds);
+	updateClassInnerHTMLWithValue("cyear", year);
+	updateClassInnerHTMLWithValue("cmnth", month);
+	updateClassInnerHTMLWithValue("cdate", day);
 
 	setTimeout(updateClock, 500); // Update time every half-second
 }

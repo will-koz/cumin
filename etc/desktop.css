@@ -1,5 +1,6 @@
 body {
 	padding: 3%;
+	font-size: 16px; /* Also update clock size */
 }
 
 hr {
@@ -7,6 +8,10 @@ hr {
 }
 
 /* ---------------------------------------------------------------------------------------------- */
+
+.cabov {
+	font-size: 32px; /* Also update body font-size, if applicable */
+}
 
 .clcpy {
 	border-width: 1px;

@@ -35,6 +35,14 @@ For all items, the `classes` field is an array of additional classes that item i
 ## Additional Reserved Classes
 
 - `clock` related:
-  - **isodt**
+  - **cabov** *Clock Above (Clock Hour, Clock Minute, Clock Second)*
+  - **cbelw** *Clock Below (Clock Year, Clock Month, Clock Date)*
+  - **cdate** *Clock Date*
+  - **chour** *Clock Hour*
+  - **cminu** *Clock Minute*
+  - **cmnth** *Clock Month*
+  - **cscnd** *Clock Second*
+  - **cyear** *Clock Year*
+  - **isodt** *Not used anywhere, but reserved for Cumin mods.*
 - **image-img**
 - **item**

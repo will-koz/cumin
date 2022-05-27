@@ -17,8 +17,23 @@ hr {
 
 /* ---------------------------------------------------------------------------------------------- */
 
+.cabov * {
+	padding-left: 0.25in;
+	padding-right: 0.25in;
+}
+
+.cbelw * {
+	font-style: italic;
+	padding-left: 0.1in;
+	padding-right: 0.1in;
+}
+
 .clcpy {
  	border-style: solid;
+}
+
+.clock {
+	text-align: center;
 }
 
 .image, .imgcl, .imglk {
