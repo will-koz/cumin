@@ -17,7 +17,7 @@ input[type=text] {
 
 /* ---------------------------------------------------------------------------------------------- */
 
-.clcpy {
+.clcpy, .imgcl {
 	border-color: #485E5E;
 }
 
@@ -28,4 +28,8 @@ input[type=text] {
 
 .item:hover {
 	box-shadow: 5px 5px #2E3F54;
+}
+
+.xlist {
+	background-color: #191D24 !important;
 }

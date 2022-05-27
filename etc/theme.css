@@ -38,7 +38,7 @@ input[type=text] {
 	padding-right: 0.1in;
 }
 
-.clcpy {
+.clcpy, .imgcl {
  	border-style: solid;
 }
 
@@ -48,6 +48,7 @@ input[type=text] {
 
 .image, .imgcl, .imglk {
 	padding: 0px !important;
+	text-align: center;
 }
 
 .image-img {

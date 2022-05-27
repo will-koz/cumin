@@ -113,6 +113,25 @@ function get_div_xlink ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_xlist ($classes, $item, $new_div) {
+	global $json_key_content, $json_key_delimiter, $json_key_href, $json_key_title;
+	$returnText = "";
+	$classes = array_merge($classes, ["xlist"]);
+	$content = "";
+	if (isset($item[$json_key_title])) {
+		$has_href = isset($item[$json_key_href]);
+		if ($has_href) $content .= html_a_header($item[$json_key_href]);
+		$content .= $item[$json_key_title];
+		if ($has_href) $content .= html_a_footer();
+		$content .= "<hr>";
+	}
+	foreach ($item[$json_key_content] as $subitem) $content .= get_item_html($subitem, true);
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
+	return $returnText;
+}
+
 function get_div_xtext ($classes, $item, $new_div) {
 	global $json_key_content, $json_key_delimiter;
 	$returnText = "";
@@ -153,6 +172,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "xlink":
 			$returnText .= get_div_xlink($classes_list, $item, $new_div);
+			break;
+		case "xlist":
+			$returnText .= get_div_xlist($classes_list, $item, $new_div);
 			break;
 		case "xtext":
 			$returnText .= get_div_xtext($classes_list, $item, $new_div);

@@ -31,8 +31,13 @@ For all items, the `classes` field is an array of additional classes that item i
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
 - **XLink** Text link.
   - `content` The text to be shown in the content of the item.
-  - `delimiter` *Optional* The type fo delimiter following the item. `hr` for horizontal line.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
   - `href` The link destination.
+- **XList** List of items, with a list title
+  - `content` Array of content to be displayed in the list.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+  - `href` *Optional* `href` can be used with `title` to link the title to another webpage
+  - `title` *Optional* A title for the list
 - **XText** Basic Text field.
   - `content` The text to be shown in the content of the item.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.

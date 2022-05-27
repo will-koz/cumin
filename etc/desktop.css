@@ -13,7 +13,7 @@ hr {
 	font-size: 32px; /* Also update body font-size, if applicable */
 }
 
-.clcpy {
+.clcpy, .imgcl {
 	border-width: 1px;
 }
 

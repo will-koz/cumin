@@ -53,6 +53,44 @@
 					"type" : "ImgCl",
 					"copy" : "PROBLEM?",
 					"src" : "https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png"
+				},
+				{
+					"type" : "XList",
+					"href" : "https://xkcd.com",
+					"title" : "Popular XKCDs",
+
+					"content" : [
+						{
+							"type" : "XLink",
+							"content" : "https://xkcd.com/150/",
+							"href" : "https://xkcd.com/150/"
+						},
+						{
+							"type" : "XLink",
+							"content" : "https://xkcd.com/162/",
+							"href" : "https://xkcd.com/162/"
+						},
+						{
+							"type" : "XLink",
+							"content" : "https://xkcd.com/556/",
+							"href" : "https://xkcd.com/556/"
+						},
+						{
+							"type" : "XLink",
+							"content" : "https://xkcd.com/688/",
+							"href" : "https://xkcd.com/688/"
+						},
+						{
+							"type" : "XLink",
+							"content" : "https://xkcd.com/730/",
+							"href" : "https://xkcd.com/730/"
+						},
+						{
+							"type" : "XLink",
+							"content" : "https://xkcd.com/1732/",
+							"href" : "https://xkcd.com/1732/"
+						}
+					]
 				}
 			],
 

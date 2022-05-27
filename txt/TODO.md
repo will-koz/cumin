@@ -16,5 +16,10 @@
     - [ ] RLink - Subreddit Link
     - [ ] WiLnk - Wikipedia Link
     - [ ] YTLnk - YouTube Link
-  - [ ] XList - List
+  - [x] XList - List
   - [x] XText - Text
+
+- [ ] Project
+  - [ ] Add "signature" to the end of the render
+  - [ ] License
+  - [ ] Logo
