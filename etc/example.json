@@ -8,7 +8,14 @@
 		"main" : {
 			"content" : [
 				{
-					"type" : "Clock"
+					"type" : "Clock",
+					"delimiter" : "hr"
+				},
+				{
+					"type" : "Searc",
+					"name" : "q",
+					"placeholder": "Search Brave...",
+					"url" : "https://search.brave.com/search"
 				},
 				{
 					"type" : "XText",

@@ -21,6 +21,11 @@ For all items, the `classes` field is an array of additional classes that item i
 - **ImgLk** Image item that also serves as a link.
   - `href` The link destination.
   - `src` Source relative to [index.php](../index.php)
+- **Searc** Search engine for custom URL
+  - `delimiter` *Optional* They type of delimiter following the item. `hr` for horizontal line.
+  - `name` The GET variable in the search URL / form item name
+  - `placeholder` *Optional* The placeholder text for the search bar.
+  - `url` URL of search
 - **XFile** Text field from external file.
   - `content` The file from which text is to be taken.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.

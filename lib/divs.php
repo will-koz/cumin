@@ -80,6 +80,20 @@ function get_div_imglk ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_searc ($classes, $item, $new_div) {
+	global $json_key_delimiter, $json_key_name, $json_key_placeholder, $json_key_url;
+	$returnText = "";
+	$classes = array_merge($classes, ["xtext"]);
+	$content = "<form action='" . $item[$json_key_url] . "' method='get'>";
+	$content .= "<input type='text' name='" . $item[$json_key_name] . "' autofocus placeholder='";
+	if (isset($item[$json_key_placeholder])) $content .= $item[$json_key_placeholder];
+	$content .= "'></input></form>";
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
+	return $returnText;
+}
+
 function get_div_xfile ($classes, $item, $new_div) {
 	global $json_key_content, $location_prefix;
 	$item[$json_key_content] = file_get_contents($location_prefix . $item[$json_key_content]);
@@ -130,6 +144,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "imglk":
 			$returnText .= get_div_imglk($classes_list, $item, $new_div);
+			break;
+		case "searc":
+			$returnText .= get_div_searc($classes_list, $item, $new_div);
 			break;
 		case "xfile":
 			$returnText .= get_div_xfile($classes_list, $item, $new_div);

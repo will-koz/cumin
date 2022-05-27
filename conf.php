@@ -19,9 +19,11 @@ $json_key_delimiter = "delimiter";
 $json_key_href = "href";
 $json_key_name = "name";
 $json_key_pages = "pages";
+$json_key_placeholder = "placeholder";
 $json_key_src = "src";
 $json_key_styles = "styles";
 $json_key_type = "type";
+$json_key_url = "url";
 $json_key_version = "version";
 
 $location_prefix = "etc/";

@@ -15,6 +15,16 @@ hr {
 	margin: 15px;
 }
 
+input[type=text] {
+	background-color: rgba(0, 0, 0, 0.1);
+	border: none;
+	font-family: Montserrat, sans-serif;
+	font-size: 100%;
+	padding: 7px;
+	text-align: center;
+	width: 50%;
+}
+
 /* ---------------------------------------------------------------------------------------------- */
 
 .cabov * {

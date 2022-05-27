@@ -6,7 +6,7 @@
   - [x] Image - Image
   - [x] ImgCl - Image with clipboard copying
   - [x] ImgLk - Image with link
-  - [ ] Searc - Search Engine
+  - [x] Searc - Search Engine
   - [ ] Table - Table
   - [ ] Topic - Media/Links related to a singular topic
   - [ ] Wther - Weather

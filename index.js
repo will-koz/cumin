@@ -20,10 +20,10 @@ function updateClock () {
 	updateClassInnerHTMLWithValue("isodt", isodate); // Unlikely to ever be utilized
 	updateClassInnerHTMLWithValue("chour", hour);
 	updateClassInnerHTMLWithValue("cminu", minute);
-	updateClassInnerHTMLWithValue("cscnd", seconds);
-	updateClassInnerHTMLWithValue("cyear", year);
-	updateClassInnerHTMLWithValue("cmnth", month);
-	updateClassInnerHTMLWithValue("cdate", day);
+	updateClassInnerHTMLWithValue("cscnd", seconds); // Q: Would this be better as a loop?
+	updateClassInnerHTMLWithValue("cyear", year);    // A: Yes.
+	updateClassInnerHTMLWithValue("cmnth", month);   // Q: Can I be bothered to do that?
+	updateClassInnerHTMLWithValue("cdate", day);     // A: No.
 
 	setTimeout(updateClock, 500); // Update time every half-second
 }
