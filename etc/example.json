@@ -24,6 +24,45 @@
 					"src" : "https://wttr.in/?format=%c+%t+%s&m"
 				},
 				{
+					"type" : "Table",
+					"href" : "https://mtg.fandom.com/wiki/Mox",
+					"title" : "Moxes",
+					"width" : [3, 1],
+
+					"content" : [
+						{
+							"type" : "ImgLk",
+							"href" : "https://scryfall.com/card/vma/7/mox-pearl",
+							"src" : "https://assets.scryfall.com/icon-196.png"
+						},
+						{
+							"type" : "ImgLk",
+							"href" : "https://scryfall.com/card/vma/9/mox-sapphire",
+							"src" : "https://assets.scryfall.com/icon-196.png"
+						},
+						{
+							"type" : "ImgLk",
+							"href" : "https://scryfall.com/card/vma/6/mox-jet",
+							"src" : "https://assets.scryfall.com/icon-196.png"
+						},
+						{
+							"type" : "ImgLk",
+							"href" : "https://scryfall.com/card/vma/8/mox-ruby",
+							"src" : "https://assets.scryfall.com/icon-196.png"
+						},
+						{
+							"type" : "ImgLk",
+							"href" : "https://scryfall.com/card/vma/5/mox-emerald",
+							"src" : "https://assets.scryfall.com/icon-196.png"
+						},
+						{
+							"type" : "ImgLk",
+							"href" : "https://scryfall.com",
+							"src" : "https://assets.scryfall.com/icon-196.png"
+						}
+					]
+				},
+				{
 					"type" : "XText",
 					"classes" : ["hello_world"],
 					"content" : "Hello World"

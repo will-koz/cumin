@@ -27,9 +27,10 @@ input[type=text] {
 }
 
 .item:hover {
+	background-color: #47494D;
 	box-shadow: 5px 5px #2E3F54;
 }
 
-.xlist {
+.xlist, .table {
 	background-color: #191D24 !important;
 }

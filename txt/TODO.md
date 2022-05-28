@@ -7,7 +7,7 @@
   - [x] ImgCl - Image with clipboard copying
   - [x] ImgLk - Image with link
   - [x] Searc - Search Engine
-  - [ ] Table - Table
+  - [x] Table - Table
   - [ ] Topic - Media/Links related to a singular topic
   - [x] Wther - Weather
   - [x] XFile - Contents of a file. (X-FILE??!?! \*soyjack face\*?)
@@ -23,3 +23,4 @@
   - [ ] Add "signature" to the end of the render
   - [ ] License
   - [x] Logo
+  - [ ] Update README

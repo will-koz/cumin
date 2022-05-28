@@ -27,6 +27,8 @@ $json_key_title = "title";
 $json_key_type = "type";
 $json_key_url = "url";
 $json_key_version = "version";
+$json_key_width = "width";
 
 $location_prefix = "etc/";
+$weather_fetching = "Fetching Data..."
 ?>

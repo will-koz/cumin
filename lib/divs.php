@@ -94,16 +94,45 @@ function get_div_searc ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_table ($classes, $item, $new_div) {
+	global $json_key_content, $json_key_delimiter, $json_key_href, $json_key_title, $json_key_width;
+	$returnText = "";
+	$classes = array_merge($classes, ["table"]);
+	$content = "";
+	if (isset($item[$json_key_title])) {
+		$has_href = isset($item[$json_key_href]);
+		if ($has_href) $content .= html_a_header($item[$json_key_href]);
+		$content .= $item[$json_key_title];
+		if ($has_href) $content .= html_a_footer();
+		$content .= "<hr>";
+	}
+	$width = (is_mobile()) ? $item[$json_key_width][1] : $item[$json_key_width][0];
+	$content .= "<table>";
+	for ($i = 0; $i < count($item[$json_key_content]); $i++) {
+		if ($i % $width == 0) {
+			if ($i != 0) $content .= "</tr>";
+			$content .= "<tr>";
+		}
+		$content .= "<td>";
+		$content .= get_item_html($item[$json_key_content][$i], true);
+		$content .= "</td>";
+	}
+	$content .= "</tr></table>";
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
+	return $returnText;
+}
+
 function get_div_wther ($classes, $item, $new_div) {
-	global $json_key_class, $json_key_delimiter, $json_key_href, $json_key_src;
+	global $json_key_class, $json_key_delimiter, $json_key_href, $json_key_src, $weather_fetching;
 	$returnText = "";
 	$classes = array_merge($classes, ["wther"]); // Seperate from the individual class of the label
 	$class = $item[$json_key_class]; // The class of the label
 	$has_href = isset($item[$json_key_href]);
 	$content = "";
 	if ($has_href) $content .= html_a_header($item[$json_key_href]);
-	$content .= "<label class='$class'></label>";
-	// $content .= "<label onload=\"updateData(event.target, '" . $item[$json_key_src] . "')\"></label>";
+	$content .= "<label class='$class'>$weather_fetching</label>";
 	if ($has_href) $content .= html_a_footer($item[$json_key_href]);
 	$content .= "<script>updateData(\"$class\", \"$item[$json_key_src]\");</script>";
 	$returnText .= (isset($item[$json_key_delimiter])) ?
@@ -184,6 +213,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "searc":
 			$returnText .= get_div_searc($classes_list, $item, $new_div);
+			break;
+		case "table":
+			$returnText .= get_div_table($classes_list, $item, $new_div);
 			break;
 		case "wther":
 			$returnText .= get_div_wther($classes_list, $item, $new_div);

@@ -26,6 +26,12 @@ For all items, the `classes` field is an array of additional classes that item i
   - `name` The GET variable in the search URL / form item name
   - `placeholder` *Optional* The placeholder text for the search bar.
   - `url` URL of search
+- **Table** Table of items, with a table title
+  - `content` Array of content to be displayed in the list.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+  - `href` *Optional* `href` can be used with `title` to link the title to another webpage
+  - `title` *Optional* A title for the table
+  - `width` An array of length 2 with the width of the desktop table, and width of the mobile table
 - **Wther** Weather field (loaded on client side).
   - `class` The class to be used with the field. Recommended to be unique.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
