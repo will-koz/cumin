@@ -30,3 +30,13 @@ function updateClock () {
 updateClock();
 // If a number is less than 10, add a zero in front of it.
 function checkTime (x) { return ((x < 10) ? "0" : "") + x; }
+
+// Fetch weather data
+function updateData (element, url) {
+	fetch(url).then(response => {
+		// if (!response.ok) { throw new Error("HTTP error: ${response.status}"); }
+		return response.text();
+	}).then(text => {
+		updateClassInnerHTMLWithValue(element, text);
+	});
+}

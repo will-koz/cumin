@@ -18,6 +18,12 @@
 					"url" : "https://search.brave.com/search"
 				},
 				{
+					"type" : "Wther",
+					"class" : "wther-wtr",
+					"href" : "https://www.google.com/search?q=weather",
+					"src" : "https://wttr.in/?format=%c+%t+%s&m"
+				},
+				{
 					"type" : "XText",
 					"classes" : ["hello_world"],
 					"content" : "Hello World"

@@ -22,10 +22,15 @@ For all items, the `classes` field is an array of additional classes that item i
   - `href` The link destination.
   - `src` Source relative to [index.php](../index.php)
 - **Searc** Search engine for custom URL
-  - `delimiter` *Optional* They type of delimiter following the item. `hr` for horizontal line.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
   - `name` The GET variable in the search URL / form item name
   - `placeholder` *Optional* The placeholder text for the search bar.
   - `url` URL of search
+- **Wther** Weather field (loaded on client side).
+  - `class` The class to be used with the field. Recommended to be unique.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+  - `href` *Optional* Make this field a link that goes to another page, specified by `href`
+  - `url` The source for weather to be retrieved. In retrospect much more powerful than just weather
 - **XFile** Text field from external file.
   - `content` The file from which text is to be taken.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.

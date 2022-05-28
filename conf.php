@@ -12,6 +12,7 @@ $get_key_frame = "frame";
 $js_files = ["index.js"];
 $json_files = ["index.json", "example.json"];
 
+$json_key_class = "class";
 $json_key_classes = "classes";
 $json_key_content = "content";
 $json_key_copy = "copy";

@@ -87,7 +87,25 @@ function get_div_searc ($classes, $item, $new_div) {
 	$content = "<form action='" . $item[$json_key_url] . "' method='get'>";
 	$content .= "<input type='text' name='" . $item[$json_key_name] . "' autofocus placeholder='";
 	if (isset($item[$json_key_placeholder])) $content .= $item[$json_key_placeholder];
-	$content .= "'></input></form>";
+	$content .= "' /></form>";
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
+	return $returnText;
+}
+
+function get_div_wther ($classes, $item, $new_div) {
+	global $json_key_class, $json_key_delimiter, $json_key_href, $json_key_src;
+	$returnText = "";
+	$classes = array_merge($classes, ["wther"]); // Seperate from the individual class of the label
+	$class = $item[$json_key_class]; // The class of the label
+	$has_href = isset($item[$json_key_href]);
+	$content = "";
+	if ($has_href) $content .= html_a_header($item[$json_key_href]);
+	$content .= "<label class='$class'></label>";
+	// $content .= "<label onload=\"updateData(event.target, '" . $item[$json_key_src] . "')\"></label>";
+	if ($has_href) $content .= html_a_footer($item[$json_key_href]);
+	$content .= "<script>updateData(\"$class\", \"$item[$json_key_src]\");</script>";
 	$returnText .= (isset($item[$json_key_delimiter])) ?
 		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
 		get_div($classes, $content, $new_div, "");
@@ -166,6 +184,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "searc":
 			$returnText .= get_div_searc($classes_list, $item, $new_div);
+			break;
+		case "wther":
+			$returnText .= get_div_wther($classes_list, $item, $new_div);
 			break;
 		case "xfile":
 			$returnText .= get_div_xfile($classes_list, $item, $new_div);
