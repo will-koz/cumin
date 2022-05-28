@@ -9,7 +9,7 @@
   - [x] Searc - Search Engine
   - [ ] Table - Table
   - [ ] Topic - Media/Links related to a singular topic
-  - [ ] Wther - Weather
+  - [x] Wther - Weather
   - [x] XFile - Contents of a file. (X-FILE??!?! \*soyjack face\*?)
   - [x] XLink - Link
     - [ ] GHLnk - GitHub Link
@@ -22,4 +22,4 @@
 - [ ] Project
   - [ ] Add "signature" to the end of the render
   - [ ] License
-  - [ ] Logo
+  - [x] Logo
