@@ -18,16 +18,25 @@
 					"url" : "https://search.brave.com/search"
 				},
 				{
-					"type" : "Wther",
-					"class" : "wther-wtr",
-					"href" : "https://www.google.com/search?q=weather",
-					"src" : "https://wttr.in/?format=%c+%t+%s&m"
+					"type" : "Topic",
+					"instagram" : "minecraft",
+					"name" : "Minecraft",
+					"src" : "https://upload.wikimedia.org/wikipedia/en/c/c9/Minecraft_Mobs.png",
+					"twitter" : "minecraft",
+					"webpage" : "https://minecraft.net",
+
+					"links" : [
+						"Wiki",
+						"https://minecraft.fandom.com/wiki/Minecraft_Wiki",
+						"Download",
+						"https://minecraft.net/download"
+					]
 				},
 				{
 					"type" : "Table",
 					"href" : "https://mtg.fandom.com/wiki/Mox",
 					"title" : "Moxes",
-					"width" : [3, 1],
+					"width" : [3, 2],
 
 					"content" : [
 						{

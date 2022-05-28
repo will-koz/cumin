@@ -72,3 +72,12 @@ table {
 	border-radius: 3px;
 	transition: 0.3s ease;
 }
+
+.topic {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.topic div {
+	padding: 15px;
+}

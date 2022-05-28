@@ -15,12 +15,11 @@
     - [ ] GHLnk - GitHub Link
     - [ ] RLink - Subreddit Link
     - [ ] WiLnk - Wikipedia Link
-    - [ ] YTLnk - YouTube Link
   - [x] XList - List
   - [x] XText - Text
 
 - [ ] Project
   - [ ] Add "signature" to the end of the render
-  - [ ] License
+  - [x] License
   - [x] Logo
   - [ ] Update README

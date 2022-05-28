@@ -124,6 +124,41 @@ function get_div_table ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_topic ($classes, $item) {
+	// This is different from the other get_div functions because it is always a new div, and it
+	// never looks at if there is a delimiter in the item JSON.
+	global $topic_instagram, $topic_links, $topic_name, $topic_src, $topic_twitter, $topic_webpage;
+	$returnText = "";
+	$classes = array_merge($classes, ["topic"]);
+	$content = "";
+	if (isset($item[$topic_src])) $content .= html_img([], $item[$topic_src]);
+	// Create a div below to optimize for display: grid in CSS
+	$content .= "<div>";
+	if (isset($item[$topic_name])) {
+		$content .= "<big>";
+		if (isset($item[$topic_webpage]))
+			$content .= html_a_header($item[$topic_webpage]) . $item[$topic_name] . html_a_footer();
+		else $content .= $item[$topic_name];
+		$content .= "</big><hr />";
+	} elseif (isset($item[$topic_webpage])) {
+		$content .= "<big>";
+		$content .= html_a_header($item[$topic_webpage]) . $item[$topic_webpage] . html_a_footer();
+		$content .= "</big><hr />";
+	}
+	if (isset($item[$topic_instagram])) $content .= website_link('i', $item[$topic_instagram]);
+	if (isset($item[$topic_twitter])) $content .= website_link('t', $item[$topic_twitter]);
+	if (isset($item[$topic_links])) {
+		for ($i = 0; $i < count($item[$topic_links]); $i += 2) {
+			if ($i != 0) $content .= "<br />";
+			$content .= html_a_header($item[$topic_links][$i + 1]);
+			$content .= $item[$topic_links][$i] . html_a_footer();
+		}
+	}
+	$content .= "</div>";
+	$returnText .= get_div($classes, $content, true, "");
+	return $returnText;
+}
+
 function get_div_wther ($classes, $item, $new_div) {
 	global $json_key_class, $json_key_delimiter, $json_key_href, $json_key_src, $weather_fetching;
 	$returnText = "";
@@ -132,7 +167,7 @@ function get_div_wther ($classes, $item, $new_div) {
 	$has_href = isset($item[$json_key_href]);
 	$content = "";
 	if ($has_href) $content .= html_a_header($item[$json_key_href]);
-	$content .= "<label class='$class'>$weather_fetching</label>";
+	$content .= "<label class=\"$class\">$weather_fetching</label>";
 	if ($has_href) $content .= html_a_footer($item[$json_key_href]);
 	$content .= "<script>updateData(\"$class\", \"$item[$json_key_src]\");</script>";
 	$returnText .= (isset($item[$json_key_delimiter])) ?
@@ -216,6 +251,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "table":
 			$returnText .= get_div_table($classes_list, $item, $new_div);
+			break;
+		case "topic":
+			$returnText .= get_div_topic($classes_list, $item);
 			break;
 		case "wther":
 			$returnText .= get_div_wther($classes_list, $item, $new_div);

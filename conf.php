@@ -30,5 +30,13 @@ $json_key_version = "version";
 $json_key_width = "width";
 
 $location_prefix = "etc/";
+
+$topic_instagram = "instagram";
+$topic_links = "links";
+$topic_name = "name";
+$topic_src = "src";
+$topic_twitter = "twitter";
+$topic_webpage = "webpage";
+
 $weather_fetching = "Fetching Data..."
 ?>

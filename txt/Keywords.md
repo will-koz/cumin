@@ -32,7 +32,15 @@ For all items, the `classes` field is an array of additional classes that item i
   - `href` *Optional* `href` can be used with `title` to link the title to another webpage
   - `title` *Optional* A title for the table
   - `width` An array of length 2 with the width of the desktop table, and width of the mobile table
-- **Wther** Weather field (loaded on client side).
+- **Topic** An element with a collection of links related to a specific topic
+  - `instagram` *Optional* Instagram username
+  - `links` *Optional* An even-numbered array with the content first, followed by the href for links
+  - `name` *Optional* The name of the topic
+  - `src` *Optional* Source of the image relative to [index.php](../index.php)
+  - `subreddit` *Optional* Subreddit related to the topic
+  - `twitter` *Optional* Twitter user related to the topic
+  - `webpage` *Optional* A link that the name links to.
+- **Wther** Weather field (loaded on client side). Recommended: https://wttr.in/?format=%c+%t+%s&m
   - `class` The class to be used with the field. Recommended to be unique.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
   - `href` *Optional* Make this field a link that goes to another page, specified by `href`
