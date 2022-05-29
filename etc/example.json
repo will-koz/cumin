@@ -6,6 +6,7 @@
 
 	"pages" : {
 		"main" : {
+			"title" : "Cumin Main Page",
 			"content" : [
 				{
 					"type" : "Clock",

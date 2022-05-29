@@ -24,8 +24,9 @@
   - [x] Add "signature" to the end of the render
   - [x] License
   - [x] Logo
-  - [ ] Title text, favicon
+  - [x] Title text, favicon
   - [x] Update README
 
 - [ ] Long Term
+  - [ ] Change favicon by frame
   - [ ] Make Topic item scale up when mouse is over it

@@ -7,6 +7,8 @@ class.
 
 For all items, the `classes` field is an array of additional classes that item is a part of.
 
+- `title` is reserved for the title of the HTML document
+- `content` is an array of items
 - **ClCpy** Text field for clipboard copying.
   - `content` The text to be shown in the content of the item.
   - `copy` The text to be copied and shown in mouseover text.

@@ -21,7 +21,7 @@ if (isset($_GET[$get_key_frame]) && isset($pagejson[$json_key_pages][$_GET[$get_
 }
 $frame = $pagejson[$json_key_pages][$frame_name];
 
-echo html_doc_header();
+echo html_doc_header($frame[$json_key_title]);
 echo html_doc_comment($pagejson, $frame_name, $json_key_name, $json_key_version);
 
 include "src/scripts.php";
