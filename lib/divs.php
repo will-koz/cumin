@@ -47,6 +47,17 @@ function get_div_clock ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_ghlnk ($classes, $item, $new_div) {
+	global $json_key_delimiter, $json_key_value;
+	$returnText = "";
+	$classes = array_merge($classes, ["xtext"]);
+	$content = website_link('g', $item[$json_key_value]);
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
+	return $returnText;
+}
+
 function get_div_image ($classes, $item, $new_div) {
 	global $error_image_new_div, $json_key_src;
 	if ($new_div == false) exit($error_image_new_div);
@@ -77,6 +88,22 @@ function get_div_imglk ($classes, $item, $new_div) {
 	$returnText .= html_a_header($item[$json_key_href]);
 	$returnText .= get_div($classes, $content, $new_div, "");
 	$returnText .= html_a_footer();
+	return $returnText;
+}
+
+function get_div_rlink ($classes, $item, $new_div) {
+	global $json_key_class, $json_key_delimiter, $json_key_value;
+	$returnText = "";
+	$classes = array_merge($classes, ["xtext"]);
+	if (isset($item[$json_key_class])) $classes = array_merge($classes, [$item[$json_key_class]]);
+	$content = website_link('r', $item[$json_key_value]);
+	if (isset($item[$json_key_class]) && isset($item[$json_key_value])) {
+		$content .= "<script>updateBGWithSubreddit(\"$item[$json_key_class]\",";
+		$content .= " \"$item[$json_key_value]\");</script>";
+	}
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
 	return $returnText;
 }
 
@@ -150,7 +177,7 @@ function get_div_topic ($classes, $item) {
 	if (isset($item[$topic_instagram])) $content .= website_link('i', $item[$topic_instagram]);
 	if (isset($item[$topic_subreddit])) $content .= website_link('r', $item[$topic_subreddit]);
 	if (isset($item[$topic_twitter])) $content .= website_link('t', $item[$topic_twitter]);
-	if (isset($item[$topic_class]) && isset($item[$topic_class])) {
+	if (isset($item[$topic_class]) && isset($item[$topic_subreddit])) {
 		$content .= "<script>updateBGWithSubreddit(\"$item[$topic_class]\",";
 		$content .= " \"$item[$topic_subreddit]\");</script>";
 	}
@@ -163,6 +190,17 @@ function get_div_topic ($classes, $item) {
 	}
 	$content .= "</div>";
 	$returnText .= get_div($classes, $content, true, "");
+	return $returnText;
+}
+
+function get_div_wilnk ($classes, $item, $new_div) {
+	global $json_key_delimiter, $json_key_value;
+	$returnText = "";
+	$classes = array_merge($classes, ["xtext"]);
+	$content = website_link('w', $item[$json_key_value]);
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
 	return $returnText;
 }
 
@@ -231,6 +269,17 @@ function get_div_xtext ($classes, $item, $new_div) {
 	return $returnText;
 }
 
+function get_div_ytlnk ($classes, $item, $new_div) {
+	global $json_key_delimiter, $json_key_value;
+	$returnText = "";
+	$classes = array_merge($classes, ["xtext"]);
+	$content = website_link('y', $item[$json_key_value]);
+	$returnText .= (isset($item[$json_key_delimiter])) ?
+		get_div($classes, $content, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $content, $new_div, "");
+	return $returnText;
+}
+
 function get_item_html ($item, $new_div) {
 	// Handle each individual item by keyword
 	global $json_key_classes, $json_key_type;
@@ -244,6 +293,9 @@ function get_item_html ($item, $new_div) {
 		case "clock":
 			$returnText .= get_div_clock($classes_list, $item, $new_div);
 			break;
+		case "ghlnk":
+			$returnText .= get_div_ghlnk($classes_list, $item, $new_div);
+			break;
 		case "image":
 			$returnText .= get_div_image($classes_list, $item, $new_div);
 			break;
@@ -253,6 +305,9 @@ function get_item_html ($item, $new_div) {
 		case "imglk":
 			$returnText .= get_div_imglk($classes_list, $item, $new_div);
 			break;
+		case "rlink":
+			$returnText .= get_div_rlink($classes_list, $item, $new_div);
+			break;
 		case "searc":
 			$returnText .= get_div_searc($classes_list, $item, $new_div);
 			break;
@@ -261,6 +316,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "topic":
 			$returnText .= get_div_topic($classes_list, $item);
+			break;
+		case "wilnk":
+			$returnText .= get_div_wilnk($classes_list, $item, $new_div);
 			break;
 		case "wther":
 			$returnText .= get_div_wther($classes_list, $item, $new_div);
@@ -276,6 +334,9 @@ function get_item_html ($item, $new_div) {
 			break;
 		case "xtext":
 			$returnText .= get_div_xtext($classes_list, $item, $new_div);
+			break;
+		case "ytlnk":
+			$returnText .= get_div_ytlnk($classes_list, $item, $new_div);
 			break;
 	}
 	return $returnText;

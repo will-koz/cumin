@@ -7,14 +7,18 @@ class.
 
 For all items, the `classes` field is an array of additional classes that item is a part of.
 
-- `title` is reserved for the title of the HTML document
 - `content` is an array of items
+- `favicon` *Optional* Favicon image, relative to [index.php](../index.php)
+- `title` is reserved for the title of the HTML document
 - **ClCpy** Text field for clipboard copying.
   - `content` The text to be shown in the content of the item.
   - `copy` The text to be copied and shown in mouseover text.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
 - **Clock** Clock that updates every second.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+- **GHLnk** GitHub link.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+  - `value` The target of the link.
 - **Image** Image item.
   - `src` Source relative to [index.php](../index.php)
 - **ImgCl** Image item for clipboard copying.
@@ -23,6 +27,10 @@ For all items, the `classes` field is an array of additional classes that item i
 - **ImgLk** Image item that also serves as a link.
   - `href` The link destination.
   - `src` Source relative to [index.php](../index.php)
+- **RLink** Reddit link.
+  - `class` *Optional* If `class` is specified, try to change background of link
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+  - `value` The target of the link.
 - **Searc** Search engine for custom URL
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
   - `name` The GET variable in the search URL / form item name
@@ -43,6 +51,9 @@ For all items, the `classes` field is an array of additional classes that item i
   - `subreddit` *Optional* Subreddit related to the topic
   - `twitter` *Optional* Twitter user related to the topic
   - `webpage` *Optional* A link that the name links to.
+- **WiLnk** Wikipedia link.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+  - `value` The target of the link.
 - **Wther** Weather field (loaded on client side). Recommended: https://wttr.in/?format=%c+%t+%s&m
   - `class` The class to be used with the field. Recommended to be unique.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
@@ -63,6 +74,9 @@ For all items, the `classes` field is an array of additional classes that item i
 - **XText** Basic Text field.
   - `content` The text to be shown in the content of the item.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+- **YTLnk** YouTube link.
+  - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
+  - `value` The target of the link.
 
 ## Additional Reserved Classes
 

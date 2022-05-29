@@ -5,7 +5,7 @@ function is_mobile () {
 }
 
 function reddit_link ($term) {
-	$href = "https://reddit.com/r/" . $term;
+	$href = "https://old.reddit.com/r/" . $term;
 	$returnText = html_a_header($href) . "r/" . $term . " " . html_a_footer();
 	$returnText .= html_a_header($href . "/top?t=week") . "r/" . $term . "/top " . html_a_footer();
 	$returnText .= html_a_header($href . "/new") . "r/" . $term . "/new<br />" . html_a_footer();

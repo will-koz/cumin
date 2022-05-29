@@ -12,10 +12,11 @@
   - [x] Wther - Weather
   - [x] XFile - Contents of a file. (X-FILE??!?! \*soyjack face\*?)
   - [x] XLink - Link
-    - [ ] GHLnk - GitHub Link
-    - [ ] RLink - Subreddit Link
-    - [ ] WiLnk - Wikipedia Link
-    - [ ] YTLnk - YouTube Link
+    - [x] GHLnk - GitHub Link
+    - [x] RLink - Subreddit Link
+      - [x] Change background based on subreddit
+    - [x] WiLnk - Wikipedia Link
+    - [x] YTLnk - YouTube Link
   - [x] XList - List
   - [x] XText - Text
 
@@ -28,5 +29,5 @@
   - [x] Update README
 
 - [ ] Long Term
-  - [ ] Change favicon by frame
+  - [x] Change favicon by frame
   - [ ] Make Topic item scale up when mouse is over it

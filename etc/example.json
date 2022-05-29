@@ -6,6 +6,7 @@
 
 	"pages" : {
 		"main" : {
+			"favicon" : "favicon.ico",
 			"title" : "Cumin Main Page",
 			"content" : [
 				{
@@ -22,6 +23,30 @@
 					"type" : "Wther",
 					"class" : "weather-dashboard",
 					"src" : "https://wttr.in/?format=%c+%t+%s&m"
+				},
+				{
+					"type" : "Table",
+					"width" : [2, 1],
+
+					"content" : [
+						{
+							"type" : "GHLnk",
+							"value" : "octocat/Hello-World"
+						},
+						{
+							"type" : "RLink",
+							"class" : "minecraft-subreddit-link",
+							"value" : "minecraft"
+						},
+						{
+							"type" : "WiLnk",
+							"value" : "Hello World"
+						},
+						{
+							"type" : "YTLnk",
+							"value" : "hello world"
+						}
+					]
 				},
 				{
 					"type" : "Topic",

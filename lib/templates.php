@@ -35,9 +35,9 @@ function html_doc_footer ($ascii_art) {
 	return $returnText;
 }
 
-function html_doc_header ($title) {
+function html_doc_header ($title, $favicon) {
 	$returnText = "<!DOCTYPE html><html><head><title>$title</title>";
-	$returnText .= "<link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">";
+	$returnText .= "<link rel=\"icon\" type=\"image/x-icon\" href=\"$favicon\">";
 	return $returnText;
 }
 
