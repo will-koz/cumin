@@ -1,10 +1,24 @@
 body {
-	padding: 3%;
+	align-items: center;
+	display: flex;
 	font-size: 16px; /* Also update clock size */
+	justify-content: center;
+	padding-bottom: none;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: none;
 }
 
 hr {
 	border-top-width: 1px;
+}
+
+html, body {
+	height: 100%;
+}
+
+td {
+	width: 25%;
 }
 
 /* ---------------------------------------------------------------------------------------------- */

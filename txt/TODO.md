@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Items
+- [x] Items
   - [x] ClCpy - Clipboard copying
   - [x] Clock - Clock
   - [x] Image - Image
@@ -20,8 +20,8 @@
   - [x] XList - List
   - [x] XText - Text
 
-- [ ] Project
-  - [ ] Add screenshots, redo example.json
+- [x] Project
+  - [x] Add screenshots, redo example.json
   - [x] Add "signature" to the end of the render
   - [x] License
   - [x] Logo

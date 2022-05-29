@@ -25,6 +25,9 @@ personalize it at all. `etc/custom/` is reserved for custom CSS, custom JavaScri
 
 TODO list kept in [txt/TODO.md](txt/TODO.md).
 
+## Screenshots
+
+Screenshots in [txt/screenshots.md](txt/screenshots.md).
 
 ## Notes
 

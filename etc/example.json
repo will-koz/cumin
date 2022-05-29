@@ -2,7 +2,7 @@
 	"name": "Example Page",
 	"version": 1,
 
-	"styles" : ["darknord.css", "theme.css"],
+	"styles" : ["light.css", "theme.css"],
 
 	"pages" : {
 		"main" : {
@@ -20,163 +20,50 @@
 					"url" : "https://search.brave.com/search"
 				},
 				{
-					"type" : "Wther",
-					"class" : "weather-dashboard",
-					"src" : "https://wttr.in/?format=%c+%t+%s&m"
-				},
-				{
 					"type" : "Table",
-					"width" : [2, 1],
+					"width" : [4, 1],
 
 					"content" : [
-						{
-							"type" : "GHLnk",
-							"value" : "octocat/Hello-World"
-						},
-						{
-							"type" : "RLink",
-							"class" : "minecraft-subreddit-link",
-							"value" : "minecraft"
-						},
-						{
-							"type" : "WiLnk",
-							"value" : "Hello World"
-						},
-						{
-							"type" : "YTLnk",
-							"value" : "hello world"
-						}
-					]
-				},
-				{
-					"type" : "Topic",
-					"class" : "minecraft-topic",
-					"instagram" : "minecraft",
-					"name" : "Minecraft",
-					"src" : "https://upload.wikimedia.org/wikipedia/en/c/c9/Minecraft_Mobs.png",
-					"subreddit" : "minecraft",
-					"twitter" : "minecraft",
-					"webpage" : "https://minecraft.net",
-
-					"links" : [
-						"Wiki",
-						"https://minecraft.fandom.com/wiki/Minecraft_Wiki",
-						"Download",
-						"https://minecraft.net/download"
-					]
-				},
-				{
-					"type" : "Table",
-					"href" : "https://mtg.fandom.com/wiki/Mox",
-					"title" : "Moxes",
-					"width" : [3, 2],
-
-					"content" : [
-						{
-							"type" : "ImgLk",
-							"href" : "https://scryfall.com/card/vma/7/mox-pearl",
-							"src" : "https://assets.scryfall.com/icon-196.png"
-						},
-						{
-							"type" : "ImgLk",
-							"href" : "https://scryfall.com/card/vma/9/mox-sapphire",
-							"src" : "https://assets.scryfall.com/icon-196.png"
-						},
-						{
-							"type" : "ImgLk",
-							"href" : "https://scryfall.com/card/vma/6/mox-jet",
-							"src" : "https://assets.scryfall.com/icon-196.png"
-						},
-						{
-							"type" : "ImgLk",
-							"href" : "https://scryfall.com/card/vma/8/mox-ruby",
-							"src" : "https://assets.scryfall.com/icon-196.png"
-						},
-						{
-							"type" : "ImgLk",
-							"href" : "https://scryfall.com/card/vma/5/mox-emerald",
-							"src" : "https://assets.scryfall.com/icon-196.png"
-						},
-						{
-							"type" : "ImgLk",
-							"href" : "https://scryfall.com",
-							"src" : "https://assets.scryfall.com/icon-196.png"
-						}
-					]
-				},
-				{
-					"type" : "XText",
-					"classes" : ["hello_world"],
-					"content" : "Hello World"
-				},
-				{
-					"type" : "XText",
-					"classes" : ["hello_world"],
-					"content" : "Second Hello World",
-					"delimiter" : "hr"
-				},
-				{
-					"type" : "XText",
-					"classes" : ["hello_world"],
-					"content" : "Final Hello World"
-				},
-				{
-					"type" : "ClCpy",
-					"content" : "Click to Copy",
-					"copy" : "Click to Copy (Copied)"
-				},
-				{
-					"type" : "XLink",
-					"content" : "Click to go to Google",
-					"delimiter" : "hr",
-					"href" : "https://google.com"
-				},
-				{
-					"type" : "XLink",
-					"content" : "Go to XKCD",
-					"href" : "https://xkcd.com"
-				},
-				{
-					"type" : "ImgCl",
-					"copy" : "PROBLEM?",
-					"src" : "https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png"
-				},
-				{
-					"type" : "XList",
-					"href" : "https://xkcd.com",
-					"title" : "Popular XKCDs",
-
-					"content" : [
-						{
-							"type" : "XLink",
-							"content" : "https://xkcd.com/150/",
-							"href" : "https://xkcd.com/150/"
-						},
-						{
-							"type" : "XLink",
-							"content" : "https://xkcd.com/162/",
-							"href" : "https://xkcd.com/162/"
-						},
-						{
-							"type" : "XLink",
-							"content" : "https://xkcd.com/556/",
-							"href" : "https://xkcd.com/556/"
-						},
-						{
-							"type" : "XLink",
-							"content" : "https://xkcd.com/688/",
-							"href" : "https://xkcd.com/688/"
-						},
-						{
-							"type" : "XLink",
-							"content" : "https://xkcd.com/730/",
-							"href" : "https://xkcd.com/730/"
-						},
-						{
-							"type" : "XLink",
-							"content" : "https://xkcd.com/1732/",
-							"href" : "https://xkcd.com/1732/"
-						}
+{
+	"type" : "Wther",
+	"class" : "weather-item",
+	"src" : "https://wttr.in/?format=%c+%t+%s&m"
+},
+{
+	"type" : "ImgLk",
+	"href" : "https://github.com",
+	"src" : "https://upload.wikimedia.org/wikipedia/commons/2/29/GitHub_logo_2013.svg"
+},
+{
+	"type" : "ImgLk",
+	"href" : "https://wikipedia.org/",
+	"src" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Wikipedia-logo-textonly.svg/1024px-Wikipedia-logo-textonly.svg.png"
+},
+{
+	"type" : "ImgLk",
+	"href" : "https://youtube.com",
+	"src" : "https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+},
+{
+	"type" : "ImgLk",
+	"href" : "https://old.reddit.com",
+	"src" : "https://upload.wikimedia.org/wikipedia/en/5/58/Reddit_logo_new.svg"
+},
+{
+	"type" : "ImgLk",
+	"href" : "https://xkcd.com",
+	"src" : "https://xkcd.com/s/0b7742.png"
+},
+{
+	"type" : "ImgLk",
+	"href" : "https://discord.com/login",
+	"src" : "https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg"
+},
+{
+	"type" : "ImgLk",
+	"href" : "https://steampowered.com",
+	"src" : "https://upload.wikimedia.org/wikipedia/commons/c/c1/Steam_2016_logo_black.svg"
+}
 					]
 				}
 			],

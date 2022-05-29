@@ -1,0 +1,40 @@
+a {
+	color: #29333D;
+}
+
+a:hover {
+	color: #223033;
+}
+
+body {
+	background-color: #F0FFFF;
+	color: #0F0F0F;
+}
+
+hr {
+	border-top-color: #0F0F0F;
+}
+
+input[type=text] {
+	color: #0F0F0F;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.clcpy, .imgcl {
+	border-color: #7BA1A1;
+}
+
+.item {
+	background-color: #EEFFFF;
+	box-shadow: none;
+}
+
+.item:hover {
+	background-color: #A5A9B3;
+	box-shadow: 5px 5px #5E80AB;
+}
+
+.xlist, .table {
+	background-color: #AABCBC !important;
+}
