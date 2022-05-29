@@ -5,11 +5,11 @@ and this engine is really dull compared to all the other spices, but it gets the
 because it was the first recommendation from GitHub when I was creating this repo.
 
 **Please feel free to make an issue if there are glaring mistakes.** With that out of the way, to
-run Cumin, go to [Running](#Running).
+install Cumin, go to [Installing](#Installing).
 
 ![Logo](logo/logo.svg)
 
-## Running
+## Installing
 
 1. Make sure you have [Apache](https://httpd.apache.org/download.cgi) and
 [PHP](https://www.php.net/downloads.php) installed for your distribution or operating system. I
@@ -19,7 +19,9 @@ downloading from the website.
 3. Run `git clone https://github.com/will-koz/cumin`, or whatever the forked location is.
 4. Create `etc/index.json` and `etc/custom/`.
 5. Personalize `etc/index.json` to your liking. Or don't personalize it to your liking. Or don't
-personalize it at all. `etc/custom/` is reserved for custom CSS, custom JavaScript, etc...
+personalize it at all. `etc/custom/` is reserved for custom CSS, custom JavaScript, etc... If you
+don't want to use the default startpage or steal someone else's startpage, You can go to
+[personalizing.md](txt/personalizing.md) to find out how to make a startpage.
 
 ## TODO
 
