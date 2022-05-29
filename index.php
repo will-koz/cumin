@@ -31,5 +31,5 @@ echo html_doc_torso();
 
 include "src/render.php";
 
-echo html_doc_footer();
+echo html_doc_footer($ascii_art);
 ?>

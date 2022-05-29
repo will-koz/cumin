@@ -21,10 +21,10 @@
 
 - [ ] Project
   - [ ] Add screenshots, redo example.json
-  - [ ] Add "signature" to the end of the render
+  - [x] Add "signature" to the end of the render
   - [x] License
   - [x] Logo
-  - [ ] Title text
+  - [ ] Title text, favicon
   - [x] Update README
 
 - [ ] Long Term

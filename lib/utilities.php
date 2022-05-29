@@ -17,6 +17,10 @@ function website_link ($webpage, $term) {
 	$link_pre_text = "Link";
 	$href = "";
 	switch ($webpage) {
+		case 'g': // GitHub
+			$href = "https://github.com/" . $term;
+			$link_pre_text = "GitHub: ";
+			break;
 		case 'i': // Instagram
 			$href = "https://instagram.com/" . $term;
 			$link_pre_text = "Instagram: ";
@@ -27,6 +31,14 @@ function website_link ($webpage, $term) {
 		case 't': // Twitter
 			$href = "https://twitter.com/" . $term;
 			$link_pre_text = "Twitter: ";
+			break;
+		case 'w': // Wikipedia
+			$href = "https://wikipedia.org/wiki/" . $term;
+			$link_pre_text = "Wikipedia: ";
+			break;
+		case 'y': // YouTube - just a search utility
+			$href = "https://youtube.com/search?q=" . $term;
+			$link_pre_text = "YouTube: ";
 			break;
 		default:
 			$href_prefix = $webpage;

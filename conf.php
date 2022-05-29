@@ -1,4 +1,5 @@
 <?php
+$ascii_art = "logo/logo.txt";
 $default_frame_name = "main";
 
 $error = "<b>Error:</b>";

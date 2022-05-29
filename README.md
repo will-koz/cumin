@@ -7,6 +7,8 @@ because it was the first recommendation from GitHub when I was creating this rep
 **Please feel free to make an issue if there are glaring mistakes.** With that out of the way, to
 run Cumin, go to [Running](#Running).
 
+![Logo](logo/logo.svg)
+
 ## Running
 
 1. Make sure you have [Apache](https://httpd.apache.org/download.cgi) and
