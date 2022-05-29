@@ -18,10 +18,17 @@
 					"url" : "https://search.brave.com/search"
 				},
 				{
+					"type" : "Wther",
+					"class" : "weather-dashboard",
+					"src" : "https://wttr.in/?format=%c+%t+%s&m"
+				},
+				{
 					"type" : "Topic",
+					"class" : "minecraft-topic",
 					"instagram" : "minecraft",
 					"name" : "Minecraft",
 					"src" : "https://upload.wikimedia.org/wikipedia/en/c/c9/Minecraft_Mobs.png",
+					"subreddit" : "minecraft",
 					"twitter" : "minecraft",
 					"webpage" : "https://minecraft.net",
 

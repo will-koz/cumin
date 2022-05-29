@@ -33,6 +33,7 @@ For all items, the `classes` field is an array of additional classes that item i
   - `title` *Optional* A title for the table
   - `width` An array of length 2 with the width of the desktop table, and width of the mobile table
 - **Topic** An element with a collection of links related to a specific topic
+  - `class` *Optional* If `class` and `subreddit` are specified, try to change background of topic
   - `instagram` *Optional* Instagram username
   - `links` *Optional* An even-numbered array with the content first, followed by the href for links
   - `name` *Optional* The name of the topic
@@ -44,7 +45,7 @@ For all items, the `classes` field is an array of additional classes that item i
   - `class` The class to be used with the field. Recommended to be unique.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
   - `href` *Optional* Make this field a link that goes to another page, specified by `href`
-  - `url` The source for weather to be retrieved. In retrospect much more powerful than just weather
+  - `src` The source for weather to be retrieved. In retrospect much more powerful than just weather
 - **XFile** Text field from external file.
   - `content` The file from which text is to be taken.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.

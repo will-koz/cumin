@@ -31,10 +31,12 @@ $json_key_width = "width";
 
 $location_prefix = "etc/";
 
+$topic_class = "class";
 $topic_instagram = "instagram";
 $topic_links = "links";
 $topic_name = "name";
 $topic_src = "src";
+$topic_subreddit = "subreddit";
 $topic_twitter = "twitter";
 $topic_webpage = "webpage";
 

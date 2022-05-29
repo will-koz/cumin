@@ -6,6 +6,17 @@ function updateClassInnerHTMLWithValue (class_name, innerHTMLvalue) {
 	for (i = 0; i < objects.length; i++) objects[i].innerHTML = innerHTMLvalue;
 }
 
+function updateClassBGWithImage (classname, url) {
+	var objects = document.getElementsByClassName(classname);
+	for (i = 0; i < objects.length; i++) {
+		formatstring = "linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .8) ), url(\"";
+ 		formatstring += url + "\")";
+		objects[i].style.background = formatstring;
+		objects[i].style.backgroundPosition = "center";
+		objects[i].style.backgroundSize = "cover";
+	}
+}
+
 // Create a timer for the clock:
 function updateClock () {
 	var current_time = new Date();
@@ -38,5 +49,20 @@ function updateData (element, url) {
 		return response.text();
 	}).then(text => {
 		updateClassInnerHTMLWithValue(element, text);
+	});
+}
+
+function updateBGWithSubreddit (element, subreddit) {
+	url = "https://www.reddit.com/r/" + subreddit + ".json";
+	fetch(url).then(response => {
+		return response.text();
+	}).then(text => {
+		var data = JSON.parse(text).data.children;
+		for (var i = 0; i < data.length && i >= 0; i++) {
+			if (data[i].data.url.substr(data[i].data.url.length - 4) == ".png") {
+				updateClassBGWithImage(element, data[i].data.url);
+				return;
+			}
+		}
 	});
 }

@@ -64,6 +64,7 @@ table {
 .item {
 	border-radius: 10px;
 	margin: 50px;
+	overflow: hidden;
 	padding: 50px; /* Reset in desktop.css, if applicable */
 	transition: 0.3s ease;
 }
@@ -76,8 +77,13 @@ table {
 .topic {
 	display: grid;
 	grid-template-columns: auto 1fr;
+	transition: 0.3s ease;
 }
 
 .topic div {
 	padding: 15px;
+}
+
+.topic:hover {
+	transition: 0.3s ease;
 }

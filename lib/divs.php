@@ -127,9 +127,11 @@ function get_div_table ($classes, $item, $new_div) {
 function get_div_topic ($classes, $item) {
 	// This is different from the other get_div functions because it is always a new div, and it
 	// never looks at if there is a delimiter in the item JSON.
-	global $topic_instagram, $topic_links, $topic_name, $topic_src, $topic_twitter, $topic_webpage;
+	global $topic_class, $topic_instagram, $topic_links, $topic_name, $topic_src, $topic_subreddit,
+		$topic_twitter, $topic_webpage;
 	$returnText = "";
 	$classes = array_merge($classes, ["topic"]);
+	if (isset($item[$topic_class])) $classes = array_merge($classes, [$item[$topic_class]]);
 	$content = "";
 	if (isset($item[$topic_src])) $content .= html_img([], $item[$topic_src]);
 	// Create a div below to optimize for display: grid in CSS
@@ -146,7 +148,12 @@ function get_div_topic ($classes, $item) {
 		$content .= "</big><hr />";
 	}
 	if (isset($item[$topic_instagram])) $content .= website_link('i', $item[$topic_instagram]);
+	if (isset($item[$topic_subreddit])) $content .= website_link('r', $item[$topic_subreddit]);
 	if (isset($item[$topic_twitter])) $content .= website_link('t', $item[$topic_twitter]);
+	if (isset($item[$topic_class]) && isset($item[$topic_class])) {
+		$content .= "<script>updateBGWithSubreddit(\"$item[$topic_class]\",";
+		$content .= " \"$item[$topic_subreddit]\");</script>";
+	}
 	if (isset($item[$topic_links])) {
 		for ($i = 0; $i < count($item[$topic_links]); $i += 2) {
 			if ($i != 0) $content .= "<br />";

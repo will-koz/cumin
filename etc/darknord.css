@@ -2,6 +2,10 @@ a {
 	color: #81A1C1;
 }
 
+a:hover {
+	color: #88C1CC;
+}
+
 body {
 	background-color: #16191F;
 	color: #E5E9F0;

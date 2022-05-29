@@ -4,6 +4,14 @@ function is_mobile () {
 	|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
 }
 
+function reddit_link ($term) {
+	$href = "https://reddit.com/r/" . $term;
+	$returnText = html_a_header($href) . "r/" . $term . " " . html_a_footer();
+	$returnText .= html_a_header($href . "/top?t=week") . "r/" . $term . "/top " . html_a_footer();
+	$returnText .= html_a_header($href . "/new") . "r/" . $term . "/new<br />" . html_a_footer();
+	return $returnText;
+}
+
 function website_link ($webpage, $term) {
 	# Way to simplify the repetitive syntax of creating links.
 	$link_pre_text = "Link";
@@ -12,6 +20,9 @@ function website_link ($webpage, $term) {
 		case 'i': // Instagram
 			$href = "https://instagram.com/" . $term;
 			$link_pre_text = "Instagram: ";
+			break;
+		case 'r': // Reddit
+			return reddit_link($term);
 			break;
 		case 't': // Twitter
 			$href = "https://twitter.com/" . $term;
