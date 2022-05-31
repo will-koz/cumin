@@ -14,5 +14,6 @@ The styles are relative to etc/. Next, create an array of objects titled `page`.
 can look at [example.json](../etc/example.json) if you have questions about Cumin input, or if my
 documentation is terrible.)
 
-Cumin takes a frame from the inside of the `page` array. (This can be specified in the `frame` GET
-variable.) The documentation for writing a frame is kept in [Keywords.md](Keywords.md).
+Cumin takes a frame from the inside of the `page` object. (This can be specified in the `frame` GET
+variable.) The documentation for writing a frame is kept in [Keywords.md](Keywords.md). For each
+page, the `content` field is an array of items.
