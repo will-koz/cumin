@@ -14,9 +14,10 @@ The styles are relative to etc/. Next, create an array of objects titled `page`.
 can look at [example.json](../etc/example.json) if you have questions about Cumin input, or if my
 documentation is terrible.)
 
-Cumin takes a frame from the inside of the `page` object. (This can be specified in the `frame` GET
-variable.) The documentation for writing a frame is kept in [Keywords.md](Keywords.md). For each
-page, the `content` field is an array of items. I would recomend not adding a string to the
-`favicon` field because it will default to `favicon.ico` and it is incredibly rare that the favicon
-should be changed, but if necessary, the `favicon` field changes the icon that is rendered in the
-title bar.
+Cumin takes a frame from the inside of the `page` object. The `page` object's keys are the names of
+the frame. (This can be specified in the `frame` GET variable.) The documentation for writing a
+frame is kept in [Keywords.md](Keywords.md). For each page, the `content` field is an array of
+items. I would recomend not adding a string to the `favicon` field because it will default to
+`favicon.ico` and it is incredibly rare that the favicon should be changed, but if necessary, the
+`favicon` field changes the icon that is rendered in the title bar. The title bar text itself can be
+changed with the `title` field.

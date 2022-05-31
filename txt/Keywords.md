@@ -9,6 +9,7 @@ For all items, the `classes` field is an array of additional classes that item i
 
 - `content` is an array of items
 - `favicon` *Optional* Favicon image, relative to [index.php](../index.php)
+- `styles` Array of styles for the specific page
 - `title` is reserved for the title of the HTML document
 - **ClCpy** Text field for clipboard copying.
   - `content` The text to be shown in the content of the item.
