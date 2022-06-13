@@ -31,5 +31,5 @@
 - [ ] Long Term
   - [x] Change favicon by frame
   - [x] Make a decent light mode
-  - [ ] Make Topic item scale up when mouse is over it
+  - [x] Make Topic item scale up when mouse is over it
   - [ ] Write a customization guide

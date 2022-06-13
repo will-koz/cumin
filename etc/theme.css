@@ -85,6 +85,7 @@ table {
 }
 
 .topic:hover {
+	transform: scale(1.2, 1.2);
 	transition: 0.3s ease;
 }
 
