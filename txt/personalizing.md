@@ -21,3 +21,6 @@ items. I would recomend not adding a string to the `favicon` field because it wi
 `favicon.ico` and it is incredibly rare that the favicon should be changed, but if necessary, the
 `favicon` field changes the icon that is rendered in the title bar. The title bar text itself can be
 changed with the `title` field.
+
+Most of the personalizing is done in the css, not in the json file; in fact it looks pretty bad if
+you don't specify any CSS files, so make sure to do that.
