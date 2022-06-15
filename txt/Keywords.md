@@ -64,7 +64,7 @@ For all items, the `classes` field is an array of additional classes that item i
   - `content` The file from which text is to be taken.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
 - **XLink** Text link.
-  - `content` The text to be shown in the content of the item.
+  - `content` *Optional* The text to be shown in the content of the item.
   - `delimiter` *Optional* The type of delimiter following the item. `hr` for horizontal line.
   - `href` The link destination.
 - **XList** List of items, with a list title

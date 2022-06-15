@@ -232,11 +232,13 @@ function get_div_xlink ($classes, $item, $new_div) {
 	global $json_key_content, $json_key_delimiter, $json_key_href;
 	$returnText = "";
 	$classes = array_merge($classes, ["xlink"]);
-	$item[$json_key_content] = html_a_header($item[$json_key_href]) . $item[$json_key_content];
- 	$item[$json_key_content] .= html_a_footer();
+	$returnContent = html_a_header($item[$json_key_href]);
+ 	$returnContent .= (isset($item[$json_key_content])) ?
+		$item[$json_key_content] : $item[$json_key_href];
+ 	$returnContent .= html_a_footer();
 	$returnText .= (isset($item[$json_key_delimiter])) ?
-		get_div($classes, $item[$json_key_content], $new_div, $item[$json_key_delimiter]) :
-		get_div($classes, $item[$json_key_content], $new_div, "");
+		get_div($classes, $returnContent, $new_div, $item[$json_key_delimiter]) :
+		get_div($classes, $returnContent, $new_div, "");
 	return $returnText;
 }
 

@@ -59,7 +59,25 @@ function updateBGWithSubreddit (element, subreddit) {
 	}).then(text => {
 		var data = JSON.parse(text).data.children;
 		for (var i = 0; i < data.length && i >= 0; i++) {
-			if (data[i].data.url.substr(data[i].data.url.length - 4) == ".png") {
+			if (data[i].data.url.substr(data[i].data.url.length - 4) == ".png" ||
+				data[i].data.url.substr(data[i].data.url.length - 4) == ".jpg" ||
+				data[i].data.url.substr(data[i].data.url.length - 4) == ".gif") {
+				updateClassBGWithImage(element, data[i].data.url);
+				return;
+			}
+		}
+	});
+
+	// If there are no images found, search through the top posts of all time
+	url = "https://www.reddit.com/r/" + subreddit + "/top.json?t=all";
+	fetch(url).then(response => {
+		return response.text();
+	}).then(text => {
+		var data = JSON.parse(text).data.children;
+		for (var i = 0; i < data.length && i >= 0; i++) {
+			if (data[i].data.url.substr(data[i].data.url.length - 4) == ".png" ||
+				data[i].data.url.substr(data[i].data.url.length - 4) == ".jpg" ||
+				data[i].data.url.substr(data[i].data.url.length - 4) == ".gif") {
 				updateClassBGWithImage(element, data[i].data.url);
 				return;
 			}
